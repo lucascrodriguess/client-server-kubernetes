@@ -8,11 +8,7 @@ Este projeto implementa um sistema de testes de desempenho de comunicação TCP 
 - **client/**: Código-fonte e configuração do cliente TCP.
 - **automation.py**: Script principal para automação dos testes, coleta de logs e geração de gráficos.
 - **graph.py**: Geração de gráficos a partir dos arquivos CSV.
-- **requirements.txt**: Dependências Python do projeto.
-- **csv/**: (Ignorado no Git) Armazena os arquivos de log gerados durante os testes.
-- **png/**: (Ignorado no Git) Armazena os gráficos gerados.
-- **venv/**: (Ignorado no Git) Ambiente virtual Python.
-- **arquivos/**: (Ignorado no Git) Pasta para arquivos temporários ou auxiliares.
+- **requirements.txt**: Dependências Python do projeto..
 
 ## Pré-requisitos
 
@@ -25,8 +21,8 @@ Este projeto implementa um sistema de testes de desempenho de comunicação TCP 
 
 1. Clone este repositório:
    ```sh
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd Cliente-Servidor-Kubernetes-2
+   git clone https://github.com/lucascrodriguess/client-server-kubernetes.git
+   cd client-server-kubernetes
    ```
 
 2. Instale as dependências Python:
