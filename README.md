@@ -28,6 +28,7 @@ Este projeto implementa um sistema de testes de desempenho de comunicação TCP 
 2. Instale as dependências Python:
    ```sh
    python -m venv venv
+   source venv/bin/activate  # Linux/Mac
    venv\Scripts\activate  # Windows
    pip install -r requirements.txt
    ```
@@ -37,6 +38,17 @@ Este projeto implementa um sistema de testes de desempenho de comunicação TCP 
    docker build -t tcp_server ./server
    docker build -t tcp_client ./client
    ```
+
+## Carregar imagem no cluster
+
+Se estiver usando o [Kind](https://kind.sigs.k8s.io/) para seu cluster Kubernetes local, carregue as imagens Docker construídas para dentro do cluster antes de executar os testes:
+
+```sh
+kind load docker-image tcp_server --name <nome do cluster>
+kind load docker-image tcp_client --name <nome do cluster>
+```
+
+Substitua `<nome do cluster>` pelo nome do seu cluster
 
 ## Execução dos Testes
 
