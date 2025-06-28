@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: client
+spec:
+  template:
+    spec:
+      containers:
+      - name: client
+        image: tcp_client
+        command: ["python", "client.py"]
+        args: ["--host", "server", "--port", "50001", "--messages", "10"]
+        imagePullPolicy: Never
+      restartPolicy: Never
+  backoffLimit: 0
